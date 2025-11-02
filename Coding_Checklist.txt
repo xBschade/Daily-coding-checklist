@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Coding Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #1e90ff;
+      text-align: center;
+    }
+    h2 {
+      color: #ff6347;
+      margin-top: 30px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background-color: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+    li.completed {
+      background-color: #d4edda;
+      text-decoration: line-through;
+      color: #155724;
+    }
+    input[type="checkbox"] {
+      margin-right: 15px;
+      transform: scale(1.3);
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daily FreeCodeCamp Checklist</h1>
+
+  <h2>1️⃣ Warm-Up (5–10 min)</h2>
+  <ul>
+    <li><input type="checkbox"> Review notes from previous lessons</li>
+    <li><input type="checkbox"> Skim last completed exercises</li>
+    <li><input type="checkbox"> Recall what each tag or concept does</li>
+  </ul>
+
+  <h2>2️⃣ Learn New Lesson (15–30 min)</h2>
+  <ul>
+    <li><input type="checkbox"> Complete 2–4 new FreeCodeCamp challenges</li>
+    <li><input type="checkbox"> Read instructions carefully</li>
+    <li><input type="checkbox"> Understand why each solution works</li>
+    <li><input type="checkbox"> If stuck, check notes or ask for help</li>
+  </ul>
+
+  <h2>3️⃣ Mini Practice (10–15 min)</h2>
+  <ul>
+    <li><input type="checkbox"> Build a small HTML snippet using today’s lesson</li>
+    <li><input type="checkbox"> Test it in your browser</li>
+  </ul>
+
+  <h2>4️⃣ Reflect (5 min)</h2>
+  <ul>
+    <li><input type="checkbox"> Write 1 new thing you learned today</li>
+    <li><input type="checkbox"> Write 1 thing you want to understand better</li>
+  </ul>
+
+  <h2>5️⃣ Weekly Mini-Project (1x/week)</h2>
+  <ul>
+    <li><input type="checkbox"> Combine lessons from the week into a small webpage</li>
+    <li><input type="checkbox"> Test and refine your project</li>
+  </ul>
+
+  <footer>Check off each item as you go to track your progress!</footer>
+
+  <script>
+    // Make checklist interactive
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(box => {
+      box.addEventListener('change', () => {
+        if (box.checked) {
+          box.parentElement.classList.add('completed');
+        } else {
+          box.parentElement.classList.remove('completed');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
